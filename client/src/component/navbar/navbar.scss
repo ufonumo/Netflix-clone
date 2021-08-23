@@ -1,0 +1,72 @@
+@import '../../App.scss';
+
+
+.navbar{
+    color: #fff;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0 , .3) 50%);
+
+    &.scrolled{
+        background-color: $main-color;
+    }
+
+    .container{
+        padding: 0 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+
+        .left{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            img{
+                margin-right: 40px;
+            }
+
+            span{
+                margin-right: 20px;
+                cursor: pointer;
+            }
+        }
+        
+
+        .right{
+            display: flex;
+            align-items: center;
+            flex: wrap;
+            cursor: pointer;
+
+            .icons{
+                margin: 0 15px;
+            }
+
+            .profile{
+
+                .options{
+                    display: none;
+                }
+
+                span{
+                    cursor: pointer;
+                    padding: 1rem;
+                }
+
+                &:hover{
+                    .options{
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        background-color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+}
